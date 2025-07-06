@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+            fx:controller="controller.TransaksiController">
+
+    <top>
+        <HBox spacing="10.0" alignment="CENTER_LEFT">
+            <padding>
+                <Insets top="10" right="10" bottom="10" left="10"/>
+            </padding>
+            <Label text="Transaksi Penjualan" style="-fx-font-size: 18px; -fx-font-weight: bold"/>
+        </HBox>
+    </top>
+
+    <left>
+        <VBox spacing="10.0">
+            <padding>
+                <Insets top="10" right="10" bottom="10" left="10"/>
+            </padding>
+            <Label text="Daftar Barang"/>
+            <TableView fx:id="tableBarang" prefWidth="400">
+                <columns>
+                    <TableColumn fx:id="colKode" text="Kode"/>
+                    <TableColumn fx:id="colNama" text="Nama"/>
+                    <TableColumn fx:id="colHarga" text="Harga"/>
+                    <TableColumn fx:id="colStok" text="Stok"/>
+                </columns>
+            </TableView>
+            <HBox spacing="10.0">
+                <TextField fx:id="tfJumlah" promptText="Jumlah"/>
+                <TextField fx:id="tfNamaPelanggan" promptText="Nama Pelanggan" />
+                <TextField fx:id="tfNoHpPelanggan" promptText="Nomor HP" />
+                <Button text="➕ Tambah ke Keranjang" onAction="#tambahKeKeranjang"/>
+            </HBox>
+        </VBox>
+    </left>
+
+    <center>
+        <VBox spacing="10.0">
+            <padding>
+                <Insets top="10" right="10" bottom="10" left="10"/>
+            </padding>
+            <Label text="Keranjang Belanja"/>
+            <TableView fx:id="tableKeranjang">
+                <columns>
+                    <TableColumn fx:id="colBarang" text="Barang"/>
+                    <TableColumn fx:id="colJumlah" text="Jumlah"/>
+                    <TableColumn fx:id="colSubtotal" text="Subtotal"/>
+                </columns>
+            </TableView>
+            <Label fx:id="labelTotal" text="Total: Rp 0" style="-fx-font-weight: bold"/>
+            <HBox spacing="10.0">
+                <Button text="🧾 Bayar" onAction="#bayarTransaksi"/>
+                <Button text="🗑 Hapus dari Keranjang" onAction="#hapusItemKeranjang"/>
+                <Button text="⬅ Kembali ke Menu" onAction="#kembaliKeMenu"/>
+            </HBox>
+        </VBox>
+    </center>
+
+</BorderPane>

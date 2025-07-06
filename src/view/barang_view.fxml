@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            xmlns="http://javafx.com/javafx/8"
+            fx:controller="controller.BarangController">
+
+    <top>
+        <VBox spacing="10.0">
+            <padding>
+                <Insets top="10" right="10" bottom="10" left="10"/>
+            </padding>
+
+            <Label text="Kelola Barang" style="-fx-font-size: 18px; -fx-font-weight: bold"/>
+
+            <HBox spacing="10.0" alignment="CENTER_LEFT">
+                <TextField fx:id="tfKode" promptText="Kode"/>
+                <TextField fx:id="tfNama" promptText="Nama"/>
+                <TextField fx:id="tfHarga" promptText="Harga"/>
+                <TextField fx:id="tfStok" promptText="Stok"/>
+
+                <VBox spacing="4">
+                    <Label text="Satuan:"/>
+                    <HBox spacing="6">
+                        <RadioButton fx:id="rbPcs" text="pcs" />
+                        <RadioButton fx:id="rbLiter" text="liter" />
+                        <RadioButton fx:id="rbGalon" text="galon" />
+                        <RadioButton fx:id="rbPax" text="pax" />
+                    </HBox>
+                </VBox>
+
+                <Button text="Tambah" onAction="#tambahBarang" style="-fx-background-color: #0FCA4A; -fx-text-fill: white;"
+                        onMouseEntered="#hoverMasuk"
+                        onMouseExited="#hoverKeluar"
+                />
+                <Button text="Update" onAction="#updateBarang" style="-fx-background-color: #0FCA4A; -fx-text-fill: white;"
+                        onMouseEntered="#hoverMasuk"
+                        onMouseExited="#hoverKeluar"/>
+                <Button text="Hapus" onAction="#hapusBarang" style="-fx-background-color: #0FCA4A; -fx-text-fill: white;"
+                        onMouseEntered="#hoverMasuk"
+                        onMouseExited="#hoverKeluar"/>
+                <Button text="⬅ Kembali ke Menu" onAction="#kembaliKeMenu" style="-fx-background-color: #0FCA4A; -fx-text-fill: white;"
+                        onMouseEntered="#hoverMasuk"
+                        onMouseExited="#hoverKeluar"/>
+            </HBox>
+        </VBox>
+    </top>
+
+    <center>
+        <TableView fx:id="tableBarang">
+            <columns>
+                <TableColumn fx:id="colKode" text="Kode"/>
+                <TableColumn fx:id="colNama" text="Nama"/>
+                <TableColumn fx:id="colHarga" text="Harga"/>
+                <TableColumn fx:id="colStok" text="Stok"/>
+                <TableColumn fx:id="colSatuan" text="Satuan"/>
+            </columns>
+        </TableView>
+    </center>
+</BorderPane>

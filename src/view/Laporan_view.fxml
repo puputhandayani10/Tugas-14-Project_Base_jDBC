@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="controller.LaporanController">
+
+    <top>
+        <VBox>
+            <padding>
+                <Insets top="10" right="10" bottom="10" left="10"/>
+            </padding>
+            <HBox spacing="10" alignment="CENTER_LEFT">
+                <Label text="📋 Laporan Penjualan Hari Ini"
+                       style="-fx-font-size: 18px; -fx-font-weight: bold"/>
+            </HBox>
+        </VBox>
+    </top>
+
+    <center>
+        <VBox spacing="10">
+            <padding>
+                <Insets top="10" right="10" bottom="10" left="10"/>
+            </padding>
+
+            <Label text="Daftar Transaksi"/>
+            <TableView fx:id="tableTransaksi">
+                <columns>
+                    <TableColumn fx:id="colIdTrans" text="ID"/>
+                    <TableColumn fx:id="colTanggal" text="Tanggal"/>
+                    <TableColumn fx:id="colTotal" text="Total"/>
+                </columns>
+            </TableView>
+
+            <Label text="Detail Transaksi"/>
+            <TableView fx:id="tableDetail">
+                <columns>
+                    <TableColumn fx:id="colKodeBarang" text="Kode"/>
+                    <TableColumn fx:id="colNamaBarang" text="Nama Barang"/>
+                    <TableColumn fx:id="colJumlah" text="Jumlah"/>
+                    <TableColumn fx:id="colSubtotal" text="Subtotal"/>
+                </columns>
+            </TableView>
+
+            <Label fx:id="labelTotalPendapatan"
+                   text="Total Pendapatan Hari Ini: Rp 0"
+                   style="-fx-font-weight: bold"/>
+            <Button text="⬅ Kembali ke Menu" onAction="#kembaliKeMenu"
+                    style="-fx-background-color: #0FCA4A; -fx-text-fill: white;"
+                    onMouseEntered="#hoverMasuk"
+                    onMouseExited="#hoverKeluar"/>
+        </VBox>
+    </center>
+
+</BorderPane>

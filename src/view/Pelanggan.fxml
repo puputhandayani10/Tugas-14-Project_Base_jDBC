@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="controller.PelangganController"
+            prefHeight="400.0" prefWidth="600.0">
+
+    <children>
+
+        <TableView fx:id="tablePelanggan" layoutX="20" layoutY="20" prefWidth="560" prefHeight="200">
+            <columns>
+                <TableColumn fx:id="colId" text="ID" prefWidth="100"/>
+                <TableColumn fx:id="colNama" text="Nama Pelanggan" prefWidth="240"/>
+                <TableColumn fx:id="colNoHp" text="No HP" prefWidth="200"/>
+            </columns>
+        </TableView>
+
+        <Label layoutX="20" layoutY="240" text="Nama:"/>
+        <TextField fx:id="tfNama" layoutX="100" layoutY="235" prefWidth="200"/>
+
+        <Label layoutX="20" layoutY="280" text="No HP:"/>
+        <TextField fx:id="tfNoHp" layoutX="100" layoutY="275" prefWidth="200"/>
+
+        <Button layoutX="320" layoutY="235" text="Tambah Pelanggan"
+                onMouseEntered="#hoverMasuk"
+                onMouseExited="#hoverKeluar"
+                style="-fx-background-color: #0FCA4A; -fx-text-fill: white;"
+                onAction="#tambahPelanggan"/>
+
+        <!-- ✅ Ini tombol Kembali yang udah diletakkan dengan layoutX/Y -->
+        <Button fx:id="btnKeluar" layoutX="20" layoutY="340"
+                text="⬅ Kembali ke Menu"
+                onAction="#kembaliKeMenu"
+                onMouseEntered="#hoverMasuk"
+                onMouseExited="#hoverKeluar"
+                style="-fx-background-color: #0FCA4A; -fx-text-fill: white;"/>
+
+    </children>
+</AnchorPane>

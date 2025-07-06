@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+        <?import javafx.scene.control.*?>
+        <?import javafx.scene.layout.*?>
+        <?import javafx.geometry.Insets?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8"
+xmlns:fx="http://javafx.com/fxml"
+fx:controller="controller.MainMenuController">
+    <VBox spacing="10" alignment="CENTER" AnchorPane.topAnchor="20" AnchorPane.leftAnchor="20" AnchorPane.rightAnchor="20">
+        <Label text="🛍️ Sistem Penjualan Toko Sembako" style="-fx-font-size: 20px; -fx-font-weight: bold;"/>
+
+        <Button text="1. Kelola Barang" onAction="#handleBarang"/>
+        <Button text="2. Kelola Pelanggan" onAction="#handlePelanggan"/>
+        <Button text="3. Buat Transaksi" onAction="#handleTransaksi"/>
+        <Button text="0. Keluar" onAction="#handleKeluar"/>
+    </VBox>
+</AnchorPane>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+        <?import javafx.scene.control.*?>
+        <?import javafx.scene.layout.*?>
+        <?import javafx.geometry.Insets?>
+        <?import javafx.scene.image.ImageView?>
+        <?import javafx.scene.image.Image?>
+
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" xmlns="http://javafx.com/javafx/8"
+fx:controller="controller.MainMenuController"
+            style="-fx-background-image: url('/assets/background.png');
+                   -fx-background-size: cover;
+                   -fx-background-repeat: no-repeat;">
+    <VBox spacing="10" alignment="CENTER" AnchorPane.topAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0">
+        <ImageView fitWidth="120" fitHeight="120">
+            <image>
+                <Image url="@/main/resources/assets/logo.png" preserveRatio="true"/>
+            </image>
+        </ImageView>
+
+        <Button text="1. Kelola Barang" onAction="#handleBarang"
+                style="-fx-background-color: #0FCA4A; -fx-text-fill: white;"
+                onMouseEntered="#hoverMasuk"
+                onMouseExited="#hoverKeluar"
+        />
+        <Button text="2. Kelola Pelanggan" onAction="#handlePelanggan"
+                style="-fx-background-color: #0FCA4A; -fx-text-fill: white;"
+                onMouseEntered="#hoverMasuk"
+                onMouseExited="#hoverKeluar"
+        />
+        <Button text="3. Buat Transaksi" onAction="#keTransaksi"
+                style="-fx-background-color: #0FCA4A; -fx-text-fill: white;"
+                onMouseEntered="#hoverMasuk"
+                onMouseExited="#hoverKeluar"
+        />
+        <Button text="4. Laporan Penjualan" onAction="#bukaLaporan"
+                style="-fx-background-color: #0FCA4A; -fx-text-fill: white;"
+                onMouseEntered="#hoverMasuk"
+                onMouseExited="#hoverKeluar"
+        />
+        <Button text="0. Keluar" onAction="#handleKeluar"
+                style="-fx-background-color: #0FCA4A; -fx-text-fill: white;"
+                onMouseEntered="#hoverMasuk"
+                onMouseExited="#hoverKeluar"
+        />
+    </VBox>
+</AnchorPane>
