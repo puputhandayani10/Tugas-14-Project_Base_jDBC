@@ -33,7 +33,7 @@ Struktur Folder:
 Cara Menjalankan Aplikasi:
 --------------------------
 1. Clone / download project ini:
-   git clone https://github.com/[namarepoanda]/[namaproject].git
+   git clone (https://github.com/puputhandayani10/Tugas-14-Project_Base_jDBC.git)
 
 2. Buat database MySQL baru:
    Nama: toko
@@ -63,9 +63,9 @@ Catatan Tambahan:
 
 Kontributor:
 ------------
-Nama: Helmi  
+Nama: Puput Handayani  
 Proyek akademik: Sistem Penjualan Toko Kelontong  
-Email: (isi jika perlu)
+Email: puput.handayani_ti23@nusaputra.ac.id
 
 Lisensi:
 --------
